@@ -1,22 +1,3 @@
-<#
-.Synopsis
-Module for Main Dashboard
-
-.DESCRIPTION
-This script process and creates the Overview sheet. 
-
-.Link
-https://github.com/azureinventory/ARI/Extras/Charts.ps1
-
-.COMPONENT
-This powershell Module is part of Azure Resource Inventory (ARI)
-
-.NOTES
-Version: 2.2.5
-First Release Date: 19th November, 2020
-Authors: Claudio Merola and Renato Gregio 
-
-#>
 param($File, $TableStyle, $PlatOS, $Subscriptions, $Resources, $ExtractionRunTime, $ReportingRunTime)
 
 $Excel = New-Object -TypeName OfficeOpenXml.ExcelPackage $File
@@ -178,17 +159,17 @@ $Draw.SetSize(445, 240)
 $Draw.SetPosition(1, 0, 2, 5)
 
 
-$txt = $Draw.RichText.Add('Azure Resource Inventory v2.2' + "`n")
+$txt = $Draw.RichText.Add('Inventario de Recursos do Azure' + "`n")
 $txt.Size = 14
 $txt.ComplexFont = $Font
 $txt.LatinFont = $Font
 
-$txt = $Draw.RichText.Add('https://github.com/azureinventory/ARI' + "`n" + "`n")
+$txt = $Draw.RichText.Add('https://github.com/leonardorochadf/InventarioRecursosAzure' + "`n" + "`n")
 $txt.Size = 11
 $txt.ComplexFont = $Font
 $txt.LatinFont = $Font
 
-$txt = $Draw.RichText.Add('Report Date: ')
+$txt = $Draw.RichText.Add('Data Report: ')
 $txt.Size = 11
 $txt.ComplexFont = $Font
 $txt.LatinFont = $Font
@@ -198,7 +179,7 @@ $txt.Size = 12
 $txt.ComplexFont = $Font
 $txt.LatinFont = $Font
 
-$txt = $Draw.RichText.Add('Extraction Time: ')
+$txt = $Draw.RichText.Add('Tempo Extracao: ')
 $txt.Size = 11
 $txt.ComplexFont = $Font
 $txt.LatinFont = $Font
@@ -208,7 +189,7 @@ $txt.Size = 12
 $txt.ComplexFont = $Font
 $txt.LatinFont = $Font
 
-$txt = $Draw.RichText.Add('Reporting Time: ')
+$txt = $Draw.RichText.Add('Tempo Report: ')
 $txt.Size = 11
 $txt.ComplexFont = $Font
 $txt.LatinFont = $Font
@@ -218,7 +199,7 @@ $txt.Size = 12
 $txt.ComplexFont = $Font
 $txt.LatinFont = $Font
 
-$txt = $Draw.RichText.Add('User Session: ')
+$txt = $Draw.RichText.Add('Usuario: ')
 $txt.Size = 11
 $txt.ComplexFont = $Font
 $txt.LatinFont = $Font
@@ -228,7 +209,7 @@ $txt.Size = 12
 $txt.ComplexFont = $Font
 $txt.LatinFont = $Font
 
-$txt = $Draw.RichText.Add('Environment: ')
+$txt = $Draw.RichText.Add('Ambiente: ')
 $txt.Size = 11
 $txt.ComplexFont = $Font
 $txt.LatinFont = $Font
@@ -238,19 +219,19 @@ $txt.Size = 12
 $txt.ComplexFont = $Font
 $txt.LatinFont = $Font
 
-$Draw.TextAlignment = 'Center'
+$Draw.TextAlignment = 'Left'
 
 $RGD = $WS.Drawings.AddShape('RGs', 'RoundRect')
 $RGD.SetSize(124, 115)
 $RGD.SetPosition(21, 5, 9, 5)
-$RGD.TextAlignment = 'Center'
-$RGD.RichText.Add('Total Resources' + "`n").Size = 12
+$RGD.TextAlignment = 'Left'
+$RGD.RichText.Add('Total Recursos' + "`n").Size = 12
 $RGD.RichText.Add($TotalRes).Size = 22
 
 
 
 $DrawP00 = $WS.Drawings | Where-Object { $_.Name -eq 'TP00' }
-$P00Name = 'Reported Resources'
+$P00Name = 'Recursos'
 $DrawP00.RichText.Add($P00Name).Size = 16
 
 $DrawP0 = $WS.Drawings | Where-Object { $_.Name -eq 'TP0' }

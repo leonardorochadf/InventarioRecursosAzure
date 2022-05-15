@@ -1,22 +1,3 @@
-<#
-.Synopsis
-Diagram Module for Draw.io
-
-.DESCRIPTION
-This script process and creates a Draw.io Diagram based on resources present in the extraction variable $Resources. 
-
-.Link
-https://github.com/azureinventory/ARI/Extras/DrawIODiagram.ps1
-
-.COMPONENT
-This powershell Module is part of Azure Resource Inventory (ARI)
-
-.NOTES
-Version: 2.2.7
-First Release Date: 19th November, 2020
-Authors: Claudio Merola and Renato Gregio 
-
-#>
 param($Subscriptions, $Resources, $Advisories, $DDFile)
 
 
@@ -369,9 +350,7 @@ Function OnPremNet {
             $Global:XmlWriter.WriteEndElement()  
 
             $Global:XmlWriter.WriteStartElement('object')            
-            $Global:XmlWriter.WriteAttributeString('label', ('Powered by:'+ "`n" +'Azure Resource Inventory v2.2'+ "`n" +'https://github.com/azureinventory/ARI'))
-            $Global:XmlWriter.WriteAttributeString('author1', 'Claudio Merola')
-            $Global:XmlWriter.WriteAttributeString('author2', 'Renato Gregio')
+            $Global:XmlWriter.WriteAttributeString('label', ('Powered by:'+ "`n" +'Inventario de Recursos do Azure'+ "`n" +'https://techcommunity.microsoft.com/t5/azure-data/invent%C3%A1rio-de-recursos-do-azure-extra%C3%A7%C3%A3o-de-dados-para-analisar/m-p/3375791'))
             $Global:XmlWriter.WriteAttributeString('id', ($Global:CellID+'-'+($Global:IDNum++)))
 
                 Icon $Signature -520 ($Global:Alt + 100) "27.5" "22"
@@ -763,9 +742,7 @@ $Global:Alt = 2
             $Global:XmlWriter.WriteEndElement()  
 
             $Global:XmlWriter.WriteStartElement('object')            
-            $Global:XmlWriter.WriteAttributeString('label', ('Powered by:'+ "`n" +'Azure Resource Inventory v2.2'+ "`n" +'https://github.com/azureinventory/ARI'))
-            $Global:XmlWriter.WriteAttributeString('author1', 'Claudio Merola')
-            $Global:XmlWriter.WriteAttributeString('author2', 'Renato Gregio')
+            $Global:XmlWriter.WriteAttributeString('label', ('Powered by:'+ "`n" +'Inventário de Recursos do Azure'+ "`n" +'https://techcommunity.microsoft.com/t5/azure-data/invent%C3%A1rio-de-recursos-do-azure-extra%C3%A7%C3%A3o-de-dados-para-analisar/m-p/3375791'))
             $Global:XmlWriter.WriteAttributeString('id', ($Global:CellID+'-'+($Global:IDNum++)))
 
                 Icon $Signature -520 ($Global:Alt + 100) "27.5" "22"
@@ -836,9 +813,7 @@ Function FullEnvironment
             $Global:XmlWriter.WriteEndElement()  
 
             $Global:XmlWriter.WriteStartElement('object')            
-            $Global:XmlWriter.WriteAttributeString('label', ('Powered by:'+ "`n" +'Azure Resource Inventory v2.2'+ "`n" +'https://github.com/azureinventory/ARI'))
-            $Global:XmlWriter.WriteAttributeString('author1', 'Claudio Merola')
-            $Global:XmlWriter.WriteAttributeString('author2', 'Renato Gregio')
+            $Global:XmlWriter.WriteAttributeString('label', ('Powered by:'+ "`n" +'Inventário de Recursos do Azure'+ "`n" +'https://techcommunity.microsoft.com/t5/azure-data/invent%C3%A1rio-de-recursos-do-azure-extra%C3%A7%C3%A3o-de-dados-para-analisar/m-p/3375791'))
             $Global:XmlWriter.WriteAttributeString('id', ($Global:CellID+'-'+($Global:IDNum++)))
 
                 Icon $Signature -520 ($Global:Alt + 100) "27.5" "22"

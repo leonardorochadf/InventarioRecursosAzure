@@ -1,27 +1,4 @@
-﻿<#
-.Synopsis
-Inventory for Azure IOT
-
-.DESCRIPTION
-This script consolidates information for all microsoft.devices/iothubs resource provider in $Resources variable. 
-Excel Sheet Name: CONTAINER
-
-.Link
-https://github.com/azureinventory/ARI/Modules/Compute/IoT.ps1
-
-.COMPONENT
-This powershell Module is part of Azure Resource Inventory (ARI)
-
-.NOTES
-Version: 2.2.0
-First Release Date: 19th November, 2020
-Authors: Claudio Merola and Renato Gregio 
-
-#>
-
-<######## Default Parameters. Don't modify this ########>
-
-param($SCPath, $Sub, $Intag, $Resources, $Task ,$File, $SmaResources, $TableStyle)
+﻿param($SCPath, $Sub, $Intag, $Resources, $Task ,$File, $SmaResources, $TableStyle)
 
 If ($Task -eq 'Processing')
 {

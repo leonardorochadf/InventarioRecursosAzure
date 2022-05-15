@@ -1,26 +1,4 @@
-﻿<#
-.Synopsis
-Short Module Description
-
-.DESCRIPTION
-For this template we used the Event HUB Module as example. 
-Long Module Description referring Resource Provider
-Excel Sheet Name: Sheet Generated in Excel
-
-.Link
-https://github.com/azureinventory/ARI/<full_URI>.ps1
-
-.COMPONENT
-   This powershell Module is part of Azure Resource Inventory (ARI)
-
-.NOTES
-Version: 2.0.0
-First Release Date: 19th November, 2020
-Authors:  
-
-#>
-
-<######## Default Parameters. Don't modify this ########>
+﻿<######## Default Parameters. Don't modify this ########>
 <# This param and if allways need to be on your module #>>
 param($SCPath, $Sub, $Intag, $Resources, $Task ,$File, $SmaResources, $TableStyle,$Unsupported)
  

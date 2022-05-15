@@ -1,27 +1,4 @@
-﻿<#
-.Synopsis
-Inventory for Azure SQLDB
-
-.DESCRIPTION
-This script consolidates information for all microsoft.sql/servers/databases resource provider in $Resources variable. 
-Excel Sheet Name: SQLDB
-
-.Link
-https://github.com/azureinventory/ARI/Modules/Data/SQLDB.ps1
-
-.COMPONENT
-This powershell Module is part of Azure Resource Inventory (ARI)
-
-.NOTES
-Version: 2.2.0
-First Release Date: 19th November, 2020
-Authors: Claudio Merola and Renato Gregio 
-
-#>
-
-<######## Default Parameters. Don't modify this ########>
-
-param($SCPath, $Sub, $Intag, $Resources, $Task , $File, $SmaResources, $TableStyle) 
+﻿param($SCPath, $Sub, $Intag, $Resources, $Task , $File, $SmaResources, $TableStyle) 
 
 if ($Task -eq 'Processing') {
 

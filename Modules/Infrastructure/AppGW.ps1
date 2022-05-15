@@ -1,25 +1,4 @@
-﻿<#
-.Synopsis
-Inventory for Azure Application Gateway
-
-.DESCRIPTION
-This script consolidates information for all microsoft.network/applicationgateways and  resource provider in $Resources variable. 
-Excel Sheet Name: AppGW
-
-.Link
-https://github.com/azureinventory/ARI/Modules/Networking/AppGW.ps1
-
-.COMPONENT
-This powershell Module is part of Azure Resource Inventory (ARI)
-
-.NOTES
-Version: 2.2.0
-First Release Date: 19th November, 2020
-Authors: Claudio Merola and Renato Gregio 
-
-#>
-
-param($SCPath, $Sub, $Intag, $Resources, $Task , $File, $SmaResources, $TableStyle, $Unsupported) 
+﻿param($SCPath, $Sub, $Intag, $Resources, $Task , $File, $SmaResources, $TableStyle, $Unsupported) 
 If ($Task -eq 'Processing') {
 
     $APPGTW = $Resources | Where-Object { $_.TYPE -eq 'microsoft.network/applicationgateways' }

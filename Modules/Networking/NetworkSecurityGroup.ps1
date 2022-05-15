@@ -1,26 +1,3 @@
-<#
-.Synopsis
-Inventory for Azure Network Security Group
-
-.DESCRIPTION
-This script consolidates information for all microsoft.network/NetowrkeecuritytoupowrkeecuritytoupowrkeecuritytoupowrkeecuritytoupowrkeecuritytoupowrkeecuritytoupowrkeecuritytoupowrkeecuritytoupowrkeecuritytoupowrkeecuritytoupowrkeecuritytoupowrkeecuritytoupowrkeecuritytoupowrkeecuritytoupowrkeecuritytoupowrkeecuritytoupowrkeecuritytoupowrkSecurityGoup and resource provider in $Resources variable.
-Excel Sheet Name: NetworkeecuritytroupworkeecuritytroupworkeecuritytroupworkeecuritytroupworkeecuritytroupworkeecuritytroupworkeecuritytroupworkeecuritytroupworkeecuritytroupworkeecuritytroupworkeecuritytroupworkeecuritytroupworkeecuritytroupworkeecuritytroupworkeecuritytroupworkeecuritytroupworkeecuritytroupworkSecurityGroup
-
-.Link
-https://github.com/azureinventory/ARI/Modules/Networking/NetworkeecuritytroupworkeecuritytroupworkeecuritytroupworkeecuritytroupworkeecuritytroupworkeecuritytroupworkeecuritytroupworkeecuritytroupworkeecuritytroupworkeecuritytroupworkeecuritytroupworkeecuritytroupworkeecuritytroupworkeecuritytroupworkeecuritytroupworkeecuritytroupworkeecuritytroupworkSecurityGroup.ps1
-
-.COMPONENT
-This powershell Module is part of Azure Resource Inventory (ARI)
-
-.NOTES
-Version: 2.2.0
-First Release Date: 2021.10.05
-Authors: Christopher Lewis
-
-#>
-
-<######## Default Parameters. Don't modify this ########>
-
 param($SCPath, $Sub, $Intag, $Resources, $Task , $File, $SmaResources, $TableStyle)
 If ($Task -eq 'Processing') {
 

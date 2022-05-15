@@ -1,27 +1,4 @@
-﻿<#
-.Synopsis
-Inventory for Azure Virtual Network
-
-.DESCRIPTION
-This script consolidates information for all microsoft.network/virtualnetworks and  resource provider in $Resources variable. 
-Excel Sheet Name: VirtualNetwork
-
-.Link
-https://github.com/azureinventory/ARI/Modules/Networking/VirtualNetwork.ps1
-
-.COMPONENT
-This powershell Module is part of Azure Resource Inventory (ARI)
-
-.NOTES
-Version: 2.2.0
-First Release Date: 19th November, 2020
-Authors: Claudio Merola and Renato Gregio 
-
-#>
-
-<######## Default Parameters. Don't modify this ########>
-
-param($SCPath, $Sub, $Intag, $Resources, $Task , $File, $SmaResources, $TableStyle) 
+﻿param($SCPath, $Sub, $Intag, $Resources, $Task , $File, $SmaResources, $TableStyle) 
 If ($Task -eq 'Processing') {
 
     $VirtualNetwork = $Resources | Where-Object { $_.TYPE -eq 'microsoft.network/virtualnetworks' }

@@ -1,27 +1,4 @@
-﻿<#
-.Synopsis
-Inventory for Azure Virtual Network Gateway 
-
-.DESCRIPTION
-This script consolidates information for all microsoft.network/virtualnetworkgateways and  resource provider in $Resources variable. 
-Excel Sheet Name: VNETGTW
-
-.Link
-https://github.com/azureinventory/ARI/Modules/Networking/VNETGTW.ps1
-
-.COMPONENT
-This powershell Module is part of Azure Resource Inventory (ARI)
-
-.NOTES
-Version: 2.2.0
-First Release Date: 19th November, 2020
-Authors: Claudio Merola and Renato Gregio 
-
-#>
-
-<######## Default Parameters. Don't modify this ########>
-
-param($SCPath, $Sub, $Intag, $Resources, $Task , $File, $SmaResources, $TableStyle, $Unsupported) 
+﻿param($SCPath, $Sub, $Intag, $Resources, $Task , $File, $SmaResources, $TableStyle, $Unsupported) 
 If ($Task -eq 'Processing') {
 
     $VNETGTW = $Resources | Where-Object { $_.TYPE -eq 'microsoft.network/virtualnetworkgateways' }

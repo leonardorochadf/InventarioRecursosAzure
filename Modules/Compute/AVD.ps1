@@ -1,26 +1,3 @@
-<#
-.Synopsis
-Inventory for Azure Virtual Desktop
-
-.DESCRIPTION
-This script consolidates information for all microsoft.desktopvirtualization and  microsoft.desktopvirtualization/hostpools/sessionhosts resource providers in $Resources variable. 
-Excel Sheet Name: AVD
-
-.Link
-https://github.com/azureinventory/ARI/Modules/Compute/AVD.ps1
-
-.COMPONENT
-This powershell Module is part of Azure Resource Inventory (ARI)
-
-.NOTES
-Version: 2.2.0
-First Release Date: 19th November, 2020
-Authors: Claudio Merola and Renato Gregio 
-
-#>
-
-<######## Default Parameters. Don't modify this ########>
-
 param($SCPath, $Sub, $Intag, $Resources, $Task , $File, $SmaResources, $TableStyle)
 
 If ($Task -eq 'Processing') {

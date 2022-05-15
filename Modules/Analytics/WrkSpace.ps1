@@ -1,27 +1,4 @@
-﻿<#
-.Synopsis
-Inventory for Azure Log Analytics Workspace
-
-.DESCRIPTION
-This script consolidates information for all microsoft.operationalinsights/workspaces and  resource provider in $Resources variable. 
-Excel Sheet Name: WrkSpace
-
-.Link
-https://github.com/azureinventory/ARI/Modules/Infrastructure/WrkSpace.ps1
-
-.COMPONENT
-   This powershell Module is part of Azure Resource Inventory (ARI)
-
-.NOTES
-Version: 2.0.0
-First Release Date: 19th November, 2020
-Authors: Claudio Merola and Renato Gregio 
-
-#>
-
-<######## Default Parameters. Don't modify this ########>
-
-param($SCPath, $Sub, $Intag, $Resources, $Task ,$File, $SmaResources, $TableStyle, $Unsupported, $AzCost)
+﻿param($SCPath, $Sub, $Intag, $Resources, $Task ,$File, $SmaResources, $TableStyle, $Unsupported, $AzCost)
  
 If ($Task -eq 'Processing')
 {

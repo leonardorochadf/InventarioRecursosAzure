@@ -1,27 +1,4 @@
-﻿<#
-.Synopsis
-Inventory for Azure Network Connections
-
-.DESCRIPTION
-This script consolidates information for all microsoft.network/connections and  resource provider in $Resources variable. 
-Excel Sheet Name: Connections
-
-.Link
-https://github.com/azureinventory/ARI/Modules/Networking/Connections.ps1
-
-.COMPONENT
-This powershell Module is part of Azure Resource Inventory (ARI)
-
-.NOTES
-Version: 2.2.0
-First Release Date: 19th November, 2020
-Authors: Claudio Merola and Renato Gregio 
-
-#>
-
-<######## Default Parameters. Don't modify this ########>
-
-param($SCPath, $Sub, $Intag, $Resources, $Task ,$File, $SmaResources, $TableStyle)
+﻿param($SCPath, $Sub, $Intag, $Resources, $Task ,$File, $SmaResources, $TableStyle)
 
 If ($Task -eq 'Processing')
 {

@@ -1,27 +1,4 @@
-﻿<#
-.Synopsis
-Inventory for Azure Public DNS
-
-.DESCRIPTION
-This script consolidates information for all microsoft.network/dnszones and  resource provider in $Resources variable. 
-Excel Sheet Name: PublicDNS
-
-.Link
-https://github.com/azureinventory/ARI/Modules/Networking/PublicDNS.ps1
-
-.COMPONENT
-This powershell Module is part of Azure Resource Inventory (ARI)
-
-.NOTES
-Version: 2.2.0
-First Release Date: 19th November, 2020
-Authors: Claudio Merola and Renato Gregio 
-
-#>
-
-<######## Default Parameters. Don't modify this ########>
-
-param($SCPath, $Sub, $Intag, $Resources, $Task , $File, $SmaResources, $TableStyle, $Unsupported) 
+﻿param($SCPath, $Sub, $Intag, $Resources, $Task , $File, $SmaResources, $TableStyle, $Unsupported) 
 If ($Task -eq 'Processing') {
 
     $PublicDNS = $Resources | Where-Object { $_.TYPE -eq 'microsoft.network/dnszones' }

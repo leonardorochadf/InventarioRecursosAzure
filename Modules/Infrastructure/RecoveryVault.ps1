@@ -1,27 +1,4 @@
-﻿<#
-.Synopsis
-Inventory for Azure Recovery Services Vault
-
-.DESCRIPTION
-This script consolidates information for all microsoft.recoveryservices/vaults and  resource provider in $Resources variable. 
-Excel Sheet Name: RecoveryVault
-
-.Link
-https://github.com/azureinventory/ARI/Modules/Infrastructure/RecoveryVault.ps1
-
-.COMPONENT
-This powershell Module is part of Azure Resource Inventory (ARI)
-
-.NOTES
-Version: 2.2.0
-First Release Date: 19th November, 2020
-Authors: Claudio Merola and Renato Gregio 
-
-#>
-
-<######## Default Parameters. Don't modify this ########>
-
-param($SCPath, $Sub, $Intag, $Resources, $Task ,$File, $SmaResources, $TableStyle, $Unsupported)
+﻿param($SCPath, $Sub, $Intag, $Resources, $Task ,$File, $SmaResources, $TableStyle, $Unsupported)
 
 If ($Task -eq 'Processing')
 {
